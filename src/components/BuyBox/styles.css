@@ -1,0 +1,129 @@
+.buybox {
+  display: flex;
+  flex-direction: column;
+}
+
+.buybox-name {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--dark-gray);
+}
+
+.buybox-reference {
+  margin-top: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--dark-gray-3);
+}
+
+.buybox-rating-row {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.buybox-stars {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  background-color: var(--warning);
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.buybox-star-icon {
+  width: 13px;
+  height: 13px;
+  filter: brightness(0) invert(1);
+}
+
+.buybox-rating {
+  font-size: 14px;
+  color: var(--light-gray);
+}
+
+.buybox-prices {
+  margin-top: 20px;
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.buybox-price-main {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--dark-gray-2);
+}
+
+.buybox-price-original {
+  font-size: 16px;
+  color: var(--light-gray-2);
+  text-decoration: line-through;
+}
+
+.buybox-description-block {
+  margin-top: 22px;
+}
+
+.buybox-description-label {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--light-gray);
+  margin-bottom: 8px;
+}
+
+.buybox-description {
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--dark-gray-2);
+}
+
+.buybox-options {
+  margin-top: 24px;
+}
+
+.buybox-actions {
+  margin-top: 30px;
+}
+
+.buybox-cta {
+  min-width: 220px;
+  height: 48px;
+  padding: 0 28px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--warning);
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  transition: filter 0.2s ease, transform 0.15s ease;
+}
+
+.buybox-cta:hover {
+  filter: brightness(0.94);
+}
+
+.buybox-cta:active {
+  transform: scale(0.99);
+}
+
+@media (max-width: 640px) {
+  .buybox-name {
+    font-size: 24px;
+  }
+
+  .buybox-price-main {
+    font-size: 26px;
+  }
+
+  .buybox-cta {
+    width: 100%;
+  }
+}
