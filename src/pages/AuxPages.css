@@ -1,0 +1,257 @@
+.aux-page {
+  padding-top: 40px;
+  padding-bottom: 84px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.aux-page-heading {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--dark-gray);
+}
+
+.aux-collections-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.aux-collection-card {
+  display: block;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.aux-collection-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.aux-chips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 16px;
+}
+
+.aux-category-tile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 22px;
+  background-color: var(--white);
+  border: 1px solid #ecebf2;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--dark-gray-2);
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.aux-category-tile:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.orders-card {
+  background-color: var(--white);
+  border-radius: 6px;
+  padding: 32px;
+}
+
+.orders-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--light-gray-2);
+}
+
+.orders-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--dark-gray-2);
+}
+
+.orders-status-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--light-gray);
+}
+
+.orders-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.order-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid #ececec;
+}
+
+.order-item:last-child {
+  border-bottom: none;
+}
+
+.order-product {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.order-thumb {
+  width: 72px;
+  height: 58px;
+  border-radius: 4px;
+  object-fit: cover;
+  background-color: var(--light-gray-3);
+}
+
+.order-code {
+  display: block;
+  font-size: 12px;
+  color: var(--light-gray);
+  margin-bottom: 4px;
+}
+
+.order-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--dark-gray);
+}
+
+.order-status {
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.order-status--transit {
+  color: var(--warning);
+}
+
+.order-status--done {
+  color: var(--light-gray);
+}
+
+.order-status--canceled {
+  color: var(--error);
+}
+
+.auth-wrapper {
+  padding: 64px 0 88px;
+  background: linear-gradient(180deg, #b5b6f2 0%, #efefff 100%);
+}
+
+.auth-container {
+  display: flex;
+  justify-content: center;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 520px;
+  background-color: var(--white);
+  border-radius: 6px;
+  padding: 36px;
+  box-shadow: 0 12px 32px rgba(31, 31, 31, 0.08);
+}
+
+.auth-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--dark-gray);
+}
+
+.auth-subtitle {
+  margin-top: 10px;
+  font-size: 15px;
+  color: var(--dark-gray-2);
+}
+
+.auth-subtitle a {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.auth-form {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.auth-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.auth-field label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--dark-gray-2);
+}
+
+.auth-field input {
+  height: 52px;
+  padding: 0 16px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background-color: var(--light-gray-3);
+  font-size: 15px;
+  color: var(--dark-gray-2);
+  outline: none;
+}
+
+.auth-field input:focus {
+  border-color: var(--primary);
+  background-color: var(--white);
+}
+
+.auth-submit {
+  margin-top: 8px;
+  height: 48px;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--primary);
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 700;
+  transition: background-color 0.2s ease;
+}
+
+.auth-submit:hover {
+  background-color: var(--tertiary);
+}
+
+.auth-feedback {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--success);
+}
+
+@media (max-width: 768px) {
+  .aux-collections-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .order-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .orders-status-label {
+    display: none;
+  }
+
+  .auth-card {
+    padding: 24px;
+  }
+}
